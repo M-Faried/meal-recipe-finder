@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+:root {
+  --primary-color: #fdfdfd;
+  --secondary-color: coral;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+  padding-top: 100px;
+  font-family: 'Baloo Tamma 2', cursive;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+::placeholder {
+  color: var(--primary-color);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+span.secondary-color {
+  color: var(--secondary-color);
+}
+
+/******************************* Nav Bar Style  */
+nav {
+  background-color: var(--primary-color);
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+nav .logo {
+  color: var(--secondary-color);
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+nav form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+nav .search-container {
+  background-color: var(--secondary-color);
+  color: var(--secondary-color);
+
+  max-width: 600px;
+  border-radius: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar-button {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 0;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.nav-bar-text-input {
+  font-family: 'Baloo Tamma 2', cursive;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 0;
+  padding: 5px 10px;
+
+  font-size: 1rem;
+}
+.nav-bar-button:active {
+  transform: scale(0.9);
+}
+.nav-bar-button:focus,
+.nav-bar-text-input:focus {
+  outline: 0;
+}
+.nav-bar-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*******************************Intro Page Style  */
+.home-page {
+  text-align: left;
+  max-width: 1024px;
+  padding: 50px;
+
+  /* transition: transform 0.5s ease-in-out; */
+  /* opacity: 1; */
+  /* transform: scaleX(100%); */
+}
+.home-page h1 {
+  color: var(--secondary-color);
+  font-size: 3rem;
+}
+.home-page h2 {
+  font-size: 2rem;
+}
+.home-page p {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+.home-page .img-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.home-page img {
+  border-radius: 10px;
+}
+.home-page.hide-page {
+  display: none;
+}
+
+/******************************* Search Result Style Style  */
+.search-results-page {
+  display: block;
+  padding: 50px;
+  text-align: center;
+}
+.search-results-page h1 {
+  color: var(--secondary-color);
+  font-size: 5rem;
+  text-align: left;
+}
+.search-results-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.meal-card {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-align: center;
+
+  /* max-width: 300px;
+  max-height: 600px; */
+
+  max-width: 30%;
+  margin: 20px;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: transform 0.5s ease;
+}
+.meal-card:hover {
+  transform: scale(1.07);
+}
+.meal-card img {
+  width: 100%;
+  height: 85%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.meal-card .meal-card-desc {
+  padding: 0 10px 50px 10px;
+}
+.search-results-page.hide-page {
+  display: none;
+}
+
+/******************************* Single Meal Page  */
+.meal-page.hide-page {
+  display: none;
+}
+.meal-page {
+  padding: 50px;
+}
+.meal-page h1 {
+  color: var(--secondary-color);
+  font-size: 5rem;
+  padding-bottom: 0;
+  display: inline-block;
+}
+.meal-page .short-desc {
+  font-size: 1.9rem;
+  padding-left: 20px;
+}
+
+.meal-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.meal-page-ingredients {
+  font-size: 1.5rem;
+}
+
+.meal-page-img-link {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.meal-page-img-link img {
+  border-radius: 10px;
+  width: 50%;
+  height: 70%;
+}
+.meal-page-img-link a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.meal-page-instructions {
+  padding-top: 20px;
+  font-size: 1.5rem;
+}
+
+/*************************************** The media adjustments  */
+@media (max-width: 1024px) {
+  .meal-card {
+    max-width: 45%;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    padding-top: 150px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .home-page,
+  .home-page .img-container {
+    max-width: 600px;
+    padding: 5px;
+  }
+
+  .meal-card {
+    max-width: 90%;
+    padding-bottom: 40px;
+  }
+}
