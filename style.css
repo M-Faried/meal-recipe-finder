@@ -35,6 +35,20 @@ span.secondary-color {
   color: var(--secondary-color);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  background-color: var(--secondary-color);
+  -webkit-text-fill-color: var(--primary-color);
+  transition: background-color 5000s ease-in-out 0s;
+}
 /******************************* Nav Bar Style  */
 nav {
   background-color: var(--primary-color);
@@ -66,6 +80,7 @@ nav form {
   justify-content: space-between;
   align-items: center;
   padding-left: 10px;
+  background-color: transparent !important;
 }
 nav .search-container {
   background-color: var(--secondary-color);
@@ -238,12 +253,13 @@ nav .search-container {
 }
 
 /*************************************** The media adjustments  */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   .meal-card {
-    max-width: 45%;
+    width: 45%;
   }
 }
-@media (max-width: 800px) {
+
+@media (max-width: 900px) {
   body {
     padding-top: 150px;
   }
@@ -257,7 +273,6 @@ nav .search-container {
   }
 
   .meal-card {
-    max-width: 90%;
-    padding-bottom: 40px;
+    width: 90%;
   }
 }
