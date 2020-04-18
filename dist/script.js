@@ -147,11 +147,8 @@ function createSearchResultsPage(term, meals) {
 function createMealCard(meal) {
   return `
   <div class="meal-card" dataMealID="${meal.idMeal}" onclick="mealClickedHandler(this)">
-    <img src="${meal.strMealThumb}" alt"${meal.strMeal}"/>
-    <div class="meal-card-desc">
-      <h3>${meal.strMeal}</h3>
-      <span>${meal.strArea} ${meal.strCategory}</span>
-    </div>
+    <img src="${meal.strMealThumb}" alt"${meal.strMeal}"/>    
+  <h2>${meal.strMeal}</h2>          
   </div>`;
 }
 /**
@@ -163,30 +160,25 @@ function createMealPage(meal) {
   return `          
     <h1>${meal.strMeal}</h1>
     <h2>${meal.strArea} ${meal.strCategory}</h2>
-
-
-    <div class="meal-page-header">
-      
-      <div>
-        <h3>Ingredients:</h3>
-        <ul>
-          ${ingredients.map((ing) => `<li>${ing}</li>`).join('')}
-        </ul>
-      </div>
-
-      <div class="meal-page-img-link">
-        <a href="${meal.strYoutube}" target="_blank">
-          <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
-          <h3>ClICK TO WATCH ON YOUTUBE</h3>
-        </a>
-      </div>
-
+ 
+    <div class="meal-image-container">      
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>       
     </div>
 
-    <div class="meal-page-instructions">      
-      <h3>Instructions:</h3>
+    <div>
+      <h3>Ingredients:</h3>
+      <ul>
+        ${ingredients.map((ing) => `<li>${ing}</li>`).join('')}
+      </ul>
+    </div>
+    
+    <div>      
+      <h3>Instructions: <a href="${
+        meal.strYoutube
+      }" target="_blank">[WATCH ON YOUTUBE]</a></h3>      
       <p>${meal.strInstructions}</p>
-    </div>`;
+    </div>    
+    `;
 }
 /**
  * Gets a list of ingredients and their measures retreived from the api.
