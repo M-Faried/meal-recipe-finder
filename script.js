@@ -162,12 +162,12 @@ function createMealPage(meal) {
   let ingredients = createFormattedIngredientList(meal);
   return `          
     <h1>${meal.strMeal}</h1>
-    <span class="short-desc">${meal.strArea} ${meal.strCategory}</span>
+    <h2>${meal.strArea} ${meal.strCategory}</h2>
 
 
     <div class="meal-page-header">
-
-      <div class="meal-page-ingredients">
+      
+      <div>
         <h3>Ingredients:</h3>
         <ul>
           ${ingredients.map((ing) => `<li>${ing}</li>`).join('')}

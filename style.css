@@ -10,31 +10,29 @@
   box-sizing: border-box;
   margin: 0;
 }
-
 body {
   background-color: var(--primary-color);
-  padding-top: 100px;
+  padding: 70px 15px;
   font-family: 'Baloo Tamma 2', cursive;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+h1 {
+  color: var(--secondary-color);
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+span.secondary-color {
+  color: var(--secondary-color);
 }
 
 ::placeholder {
   color: var(--primary-color);
 }
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
   display: none;
 }
-
-span.secondary-color {
-  color: var(--secondary-color);
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -49,6 +47,7 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--primary-color);
   transition: background-color 5000s ease-in-out 0s;
 }
+
 /******************************* Nav Bar Style  */
 nav {
   background-color: var(--primary-color);
@@ -124,19 +123,7 @@ nav .search-container {
 /*******************************Intro Page Style  */
 .home-page {
   text-align: left;
-  max-width: 1024px;
   padding: 50px;
-
-  /* transition: transform 0.5s ease-in-out; */
-  /* opacity: 1; */
-  /* transform: scaleX(100%); */
-}
-.home-page h1 {
-  color: var(--secondary-color);
-  font-size: 3rem;
-}
-.home-page h2 {
-  font-size: 2rem;
 }
 .home-page p {
   margin-top: 20px;
@@ -148,6 +135,7 @@ nav .search-container {
 }
 .home-page img {
   border-radius: 10px;
+  width: 40%;
 }
 .home-page.hide-page {
   display: none;
@@ -161,11 +149,6 @@ nav .search-container {
 }
 .search-results-page.hide-page {
   display: none;
-}
-.search-results-page h1 {
-  color: var(--secondary-color);
-  font-size: 5rem;
-  text-align: left;
 }
 .search-results-container {
   display: flex;
@@ -198,7 +181,6 @@ nav .search-container {
   border-top-right-radius: 10px;
 }
 .meal-card .meal-card-desc {
-  padding: 0px;
   width: 100%;
   height: 15%;
 }
@@ -208,30 +190,16 @@ nav .search-container {
   display: none;
 }
 .meal-page {
-  padding: 50px;
-}
-.meal-page h1 {
-  color: var(--secondary-color);
-  font-size: 5rem;
-  padding-bottom: 0;
-  display: inline-block;
-}
-.meal-page .short-desc {
-  font-size: 1.9rem;
-  padding-left: 20px;
+  padding: 50px 1px;
+  font-size: 1.5rem;
 }
 
 .meal-page-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-top: 20px;
 }
-
-.meal-page-ingredients {
-  font-size: 1.5rem;
-}
-
 .meal-page-img-link {
   align-items: center;
   justify-content: center;
@@ -240,39 +208,65 @@ nav .search-container {
 .meal-page-img-link img {
   border-radius: 10px;
   width: 50%;
-  height: 70%;
 }
 .meal-page-img-link a {
-  text-decoration: none;
   color: var(--secondary-color);
+  text-decoration: none;
 }
-
 .meal-page-instructions {
-  padding-top: 20px;
-  font-size: 1.5rem;
+  margin-top: 40px;
 }
 
 /*************************************** The media adjustments  */
 @media (max-width: 1300px) {
-  .meal-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 900px) {
   body {
-    padding-top: 150px;
+    padding: 150px 15px;
   }
   nav {
     flex-direction: column;
   }
-  .home-page,
-  .home-page .img-container {
-    max-width: 600px;
-    padding: 5px;
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-page p {
+    font-size: 1rem;
+  }
+  .home-page img {
+    width: 90%;
   }
 
   .meal-card {
-    width: 90%;
+    width: 45%;
+  }
+  .meal-page {
+    font-size: 1rem;
+  }
+  .meal-page-img-link img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  body {
+    padding-top: 150px;
+  }
+  .meal-card {
+    width: 100%;
+  }
+  .meal-page-header {
+    flex-direction: column;
+  }
+  .meal-page-img-link {
+    margin-top: 20px;
   }
 }
