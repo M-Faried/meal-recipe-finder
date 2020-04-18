@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Meal Recipe Finder</title>
+</head>
+
+<body>
+
+    <nav>
+        <h1 class="logo">Cooking at Home is FUN!</h1>
+        <a href="mailto:m.a.faried@gmail.com" target="_blank">Contact Developer: m.a.faried@gmail.com</a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" class="nav-bar-text-input" id="txtSearchTerm" placeholder="Try Steak or Chicken..">
+                <button type="submit" class="nav-bar-button">
+                    <i class="fa fa-search fa-2x"></i>
+                </button>
+            </form>
+            <button class="nav-bar-button" id="btnRandom">
+                <i class="fa fa-random fa-2x"></i>
+            </button>
+            <button class="nav-bar-button" id="btnHome">
+                <i class="fa fa-home fa-2x"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="home-page" id="homePage">
+        <h1>Searching For A Meal Recipe?!!!</h1>
+        <h2>You are at the right place.</h2>
+        <div class="img-container">
+            <img src="./img/13911817-low_res-the-big-family-cooking-showdown.jpg" alt="Family Cooking">
+        </div>
+        <p>
+            Whether you live on your own or are a busy parent, finding the time and energy to prepare home-cooked meals
+            can seem like a daunting task. At the end of a hectic day, eating out or ordering in might feel like the
+            quickest, easiest option. But convenience food can take a significant toll on your mood and health.</p>
+        <p>
+            By cooking for yourself, you can ensure that you and your family eat fresh, wholesome meals. This can help
+            you to look and feel healthier, boost your energy, stabilize your weight and mood, and improve your sleep
+            and resilience to stress. When you prepare your own food, you’re also more aware of exactly what you’re
+            putting in your body, and how different foods affect the way you think and feel.
+        </p>
+    </div>
+
+    <div class="search-results-page hide-page" id="searchResultsPage">
+    </div>
+
+    <div class="meal-page hide-page" id="mealPage">
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
