@@ -149,7 +149,7 @@ function createMealCard(meal) {
   <div class="meal-card" dataMealID="${meal.idMeal}" onclick="mealClickedHandler(this)">
     <img src="${meal.strMealThumb}" alt"${meal.strMeal}"/>
     <div class="meal-card-desc">
-      <h2>${meal.strMeal}</h2>
+      <h3>${meal.strMeal}</h3>
       <span>${meal.strArea} ${meal.strCategory}</span>
     </div>
   </div>`;
