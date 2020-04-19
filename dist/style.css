@@ -256,7 +256,7 @@ nav .search-container {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   h1 {
     font-size: 2rem;
   }
@@ -273,6 +273,9 @@ nav .search-container {
 }
 
 @media (max-width: 500px) {
+  .search-results-page {
+    padding: 50px 10px;
+  }
   .meal-card {
     width: 100%;
   }
