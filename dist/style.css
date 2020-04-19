@@ -161,7 +161,7 @@ nav .search-container {
 .meal-card {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
   width: 30%;
   margin: 20px;
 
@@ -170,15 +170,27 @@ nav .search-container {
 
   transition: transform 0.5s ease;
   box-sizing: initial;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .meal-card:hover {
   transform: scale(1.07);
 }
 .meal-card img {
   width: 100%;
-  height: 80%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  flex: 5;
+}
+.meal-card-desc {
+  flex: 1;
+  padding: 0 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /******************************* Single Meal Page  */
@@ -220,6 +232,9 @@ nav .search-container {
   h2 {
     font-size: 1.5rem;
   }
+  h3 {
+    font-size: 1.2rem;
+  }
 
   .home-page p {
     font-size: 1rem;
@@ -235,20 +250,25 @@ nav .search-container {
   .meal-page {
     font-size: 1rem;
   }
+
+  .meal-image-container img {
+    width: 40%;
+  }
 }
 
 @media (max-width: 1000px) {
   h1 {
     font-size: 2rem;
   }
-  h2 {
-    font-size: 1rem;
-  }
+
   body {
     padding-top: 150px;
   }
   .meal-card {
     width: 95%;
+  }
+  .meal-image-container img {
+    width: 90%;
   }
 }
 

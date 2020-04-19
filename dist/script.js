@@ -146,9 +146,12 @@ function createSearchResultsPage(term, meals) {
  */
 function createMealCard(meal) {
   return `
-  <div class="meal-card" dataMealID="${meal.idMeal}" onclick="mealClickedHandler(this)">
-    <img src="${meal.strMealThumb}" alt"${meal.strMeal}"/>    
-  <h2>${meal.strMeal}</h2>          
+  <div class="meal-card" dataMealID="${meal.idMeal}" onclick="mealClickedHandler(this)">  
+    <img src="${meal.strMealThumb}" alt"${meal.strMeal}"/> 
+    <div class="meal-card-desc">   
+      <h2>${meal.strMeal}</h2>
+      <h3>( ${meal.strArea} ${meal.strCategory} )</h3>
+    </div>       
   </div>`;
 }
 /**
