@@ -236,6 +236,9 @@ nav .search-container {
     font-size: 1.2rem;
   }
 
+  .home-page {
+    padding: 50px 5px;
+  }
   .home-page p {
     font-size: 1rem;
   }
@@ -250,8 +253,7 @@ nav .search-container {
   .meal-page {
     font-size: 1rem;
   }
-
-  .meal-image-container img {
+  .meal-page .meal-image-container img {
     width: 40%;
   }
 }
@@ -260,14 +262,13 @@ nav .search-container {
   h1 {
     font-size: 2rem;
   }
-
   body {
     padding-top: 150px;
   }
   .meal-card {
     width: 95%;
   }
-  .meal-image-container img {
+  .meal-page .meal-image-container img {
     width: 90%;
   }
 }
