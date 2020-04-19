@@ -64,21 +64,6 @@ function displaySearchPageForTerm(term) {
     });
 }
 /**
- * The function attached to every meal card displayed in the search page.
- * @param {event} e The click event argument object.
- */
-function mealClickedHandler(e) {
-  if (!e) e = window.event;
-  const mealID = e.getAttribute('dataMealID');
-  if (mealID) {
-    fetchAndDisplaySingleMeal(
-      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`
-    );
-  } else {
-    console.log('Unable to get the meal ID'); //TODO handle errors here.
-  }
-}
-/**
  * Fetches the meal data specified by the arg fetchLink then populates the meal page with data.
  * @param {String} fetchLink The API link which is used to fetch the data of the meal.
  */
@@ -133,9 +118,14 @@ function showMealPage(show) {
 
 /////////////////////////////////////////////// HTML creator functions
 
+/**
+ * Created the search results page.
+ * @param {String} term The term used to fetch meals data.
+ * @param {Array} meals The meals retrieved from the API.
+ */
 function createSearchResultsPage(term, meals) {
   return `
-  <h2>Displaying results for <span class="secondary-color">\'${term}\'</span> :</h2>
+    <h2>Displaying results for <span class="secondary-color">\'${term}\'</span> :</h2>
     <div class="search-results-container">
       ${meals.map((meal) => createMealCard(meal)).join('')}
     </div>`;
@@ -146,13 +136,22 @@ function createSearchResultsPage(term, meals) {
  */
 function createMealCard(meal) {
   return `
-  <div class="meal-card" dataMealID="${meal.idMeal}" onclick="mealClickedHandler(this)">  
+  <div class="meal-card" onclick="mealCardClickedHandler(${meal.idMeal})">  
     <img src="${meal.strMealThumb}" alt"${meal.strMeal}"/> 
     <div class="meal-card-desc">   
       <h2>${meal.strMeal}</h2>
       <h3>( ${meal.strArea} ${meal.strCategory} )</h3>
     </div>       
   </div>`;
+}
+/**
+ * The function attached to every meal card displayed in the search page.
+ * @param {String} mealID The meal id to fetch the data for..
+ */
+function mealCardClickedHandler(mealID) {
+  fetchAndDisplaySingleMeal(
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`
+  );
 }
 /**
  * Creates the display page for the meal json object.
