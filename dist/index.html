@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="./tooltip.css">
     <link rel="stylesheet" href="./style.css">
     <title>Meal Recipe Finder</title>
 </head>
@@ -16,13 +17,14 @@
         <a href="mailto:m.a.faried@gmail.com" target="_blank">Contact Developer: m.a.faried@gmail.com</a>
         <div class="search-container">
             <form id="formSearch">
-                <input type="text" class="nav-bar-text-input" id="txtSearchTerm" placeholder="Try Steak or Chicken..">
+                <input type="text" class="nav-bar-text-input" id="txtSearchTerm" placeholder="Try Beef or Chicken..">
                 <button type="submit" class="nav-bar-button">
                     <i class="fa fa-search fa-2x"></i>
                 </button>
             </form>
             <button class="nav-bar-button" id="btnRandom">
                 <i class="fa fa-random fa-2x"></i>
+                <span class="tooltiptext">Get A Random Recipe</span>
             </button>
             <button class="nav-bar-button" id="btnHome">
                 <i class="fa fa-home fa-2x"></i>

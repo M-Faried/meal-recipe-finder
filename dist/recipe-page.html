@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="tooltip.css">
+    <link rel="stylesheet" href="./recipe-page.css">
+    <title>Meal Recipe Finder</title>
+</head>
+
+<body>
+
+    <div class="header-container">
+        <a href="mailto:m.a.faried@gmail.com" target="_blank">Contact Developer: m.a.faried@gmail.com</a>
+        <h1 class="logo">Cooking at Home is FUN!</h1>
+    </div>
+
+    <h1 id="page-message"></h1>
+
+    <div class="container" id="container">
+
+        <div class="nav-container">
+            <a class="nav-button" href="./recipe-page.html?recipe_id=random">
+                <i class="fa fa-random"></i>
+            </a>
+            <a class="nav-button" href="./index.html">
+                <i class="fa fa-home"></i>
+            </a>
+        </div>
+
+        <div class="meal-header-container">
+            <h1 id="name">Here goes the name</h1>
+            <h2 id="info">Here goes the info</h2>
+        </div>
+
+        <div class="meal-image-container">
+            <img id="thumb" src="" alt="" />
+        </div>
+
+        <div class="meal-ingredients">
+            <h3>Ingredients:</h3>
+            <ul id="ing-list">
+            </ul>
+        </div>
+
+        <div class="meal-instructions">
+            <h3>Instructions: <a id="youtube-link" href="#" target="_blank">[WATCH ON YOUTUBE]</a></h3>
+
+            <p id="instructions"></p>
+        </div>
+    </div>
+
+    <script src="./recipe-page.js"></script>
+</body>
+
+</html>

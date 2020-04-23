@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+
+.tooltiptext {
+  background-color: grey;
+  color: #fff;
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 12px;
+
+  visibility: hidden;
+  width: 120px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 2000;
+}
+
+button:hover .tooltiptext {
+  visibility: visible;
+}
+
+a:hover .tooltiptext {
+  visibility: visible;
+}
