@@ -192,30 +192,9 @@ nav .search-container {
   flex-direction: column;
   justify-content: center;
 }
-
-/******************************* Single Meal Page  */
-.meal-page.hide-page {
-  display: none;
-}
-.meal-page {
-  padding: 50px 20px;
-  font-size: 1.5rem;
-}
-.meal-page h3 {
-  padding-top: 20px;
-}
-.meal-page a {
-  color: var(--secondary-color);
+.meal-card a {
   text-decoration: none;
-  font-weight: bold;
-}
-.meal-image-container {
-  text-align: center;
-  margin-top: 20px;
-}
-.meal-image-container img {
-  border-radius: 10px;
-  width: 30%;
+  color: white;
 }
 
 /*************************************** The media adjustments  */
@@ -249,13 +228,6 @@ nav .search-container {
   .meal-card {
     width: 45%;
   }
-
-  .meal-page {
-    font-size: 1rem;
-  }
-  .meal-page .meal-image-container img {
-    width: 40%;
-  }
 }
 
 @media (max-width: 800px) {
@@ -267,9 +239,6 @@ nav .search-container {
   }
   .meal-card {
     width: 95%;
-  }
-  .meal-page .meal-image-container img {
-    width: 90%;
   }
 }
 
